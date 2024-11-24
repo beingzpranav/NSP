@@ -9,21 +9,35 @@
 
 /* Navbar styles */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
-.nav__brand h2 {
+.nav__brand {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #2557a7;
-    font-size: 1.8rem;
 }
 
 .nav__links {
@@ -32,14 +46,40 @@
 }
 
 .nav__link {
-    text-decoration: none;
     color: #444;
-    font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav__link:hover {
     color: #2557a7;
+}
+
+/* Add these new button styles */
+.nav__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #2557a7;
+    color: #2557a7;
+}
+
+.btn-primary {
+    background: #2557a7;
+    border: 1px solid #2557a7;
+    color: #fff;
 }
 
 /* Hero section styles */
@@ -292,6 +332,10 @@
 /* Responsive design */
 @media (max-width: 768px) {
     .nav__links {
+        display: none;
+    }
+    
+    .nav__buttons {
         display: none;
     }
     
