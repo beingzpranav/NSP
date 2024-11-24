@@ -3,109 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--=============== REMIXICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="main.css">
-    
     <title>Apna Kaam - Find Your Dream Internship</title>
+    
+    <!-- Remixicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="main2.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav__brand">
-            <h2>Apna Kaam</h2>
-        </div>
-        <div class="nav__links">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">Internships</a>
-            <a href="#" class="nav__link">Companies</a>
-           
-            <a href="index.html" class="nav__link">Login</a>
+        <div class="nav__container">
+            <div class="nav__brand">Apna Kaam</div>
+            <div class="nav__links">
+                <a href="main.html" class="nav__link">Home</a>
+                <a href="internship.html" class="nav__link">Internships</a>
+                <a href="#" class="nav__link">Companies</a>
+                <a href="#" class="nav__link">Resources</a>
+            </div>
+            <div class="nav__buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero__content">
-            <h1>Find Your Dream Internship</h1>
-            <p>Discover thousands of internship opportunities with India's best companies</p>
-            <div class="search__box">
-                <input type="text" placeholder="Search for internships, companies...">
-                <button class="search__button"><i class="ri-search-line"></i> Search</button>
+            <h1 data-aos="fade-up">Find Your Dream Internship</h1>
+            <p data-aos="fade-up" data-aos-delay="100">10,000+ opportunities from India's most innovative companies</p>
+            <div class="search__box" data-aos="fade-up" data-aos-delay="200">
+                <input type="text" class="search__input" placeholder="Search by skill, company, or role...">
+                <input type="text" class="search__location" placeholder="Location">
+                <button class="search__button">
+                    <i class="ri-search-line"></i> Search
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <h2>Popular Categories</h2>
-        <div class="category__grid">
-            <div class="category__card">
-                <i class="ri-code-s-slash-line"></i>
-                <h3>Web Development</h3>
-                <p>1000+ opportunities</p>
+    <!-- Quick Filters -->
+    <section class="filters">
+        <div class="filters__container">
+            <button class="filter__btn active">All Internships</button>
+            <button class="filter__btn">Remote</button>
+            <button class="filter__btn">Full Time</button>
+            <button class="filter__btn">Part Time</button>
+            <button class="filter__btn">Paid</button>
+            <button class="filter__btn">Immediate Start</button>
+        </div>
+    </section>
+
+    <!-- Featured Internships -->
+    <section class="internships">
+        <div class="section__header">
+            <h2 class="section__title">Featured Internships</h2>
+            <a href="#" class="view__all">View All <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="cards__grid">
+            <!-- Internship Card 1 -->
+            <div class="card" data-aos="fade-up">
+                <div class="card__header">
+                    <div>
+                        <h3 class="card__title">Frontend Developer Intern</h3>
+                        <p class="company__name">TechCorp Solutions</p>
+                    </div>
+                    <img src="/api/placeholder/48/48" alt="Company Logo" class="company__logo">
+                </div>
+                <div class="card__meta">
+                    <div class="meta__item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Remote</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-time-line"></i>
+                        <span>3-6 months</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-money-dollar-circle-line"></i>
+                        <span>₹15,000/month</span>
+                    </div>
+                </div>
+                <div class="skill__tags">
+                    <span class="skill__tag">React</span>
+                    <span class="skill__tag">JavaScript</span>
+                    <span class="skill__tag">CSS</span>
+                </div>
+                <button class="apply__btn">Apply Now</button>
             </div>
-            <div class="category__card">
-                <i class="ri-marketing-line"></i>
-                <h3>Digital Marketing</h3>
-                <p>800+ opportunities</p>
+
+            <!-- Internship Card 2 -->
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card__header">
+                    <div>
+                        <h3 class="card__title">Marketing Intern</h3>
+                        <p class="company__name">Digital Ventures</p>
+                    </div>
+                    <img src="/api/placeholder/48/48" alt="Company Logo" class="company__logo">
+                </div>
+                <div class="card__meta">
+                    <div class="meta__item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Mumbai</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-time-line"></i>
+                        <span>4 months</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-money-dollar-circle-line"></i>
+                        <span>₹12,000/month</span>
+                    </div>
+                </div>
+                <div class="skill__tags">
+                    <span class="skill__tag">Social Media</span>
+                    <span class="skill__tag">Content</span>
+                    <span class="skill__tag">Analytics</span>
+                </div>
+                <button class="apply__btn">Apply Now</button>
             </div>
-            <div class="category__card">
-                <i class="ri-palette-line"></i>
-                <h3>Graphic Design</h3>
-                <p>600+ opportunities</p>
-            </div>
-            <div class="category__card">
-                <i class="ri-customer-service-2-line"></i>
-                <h3>Content Writing</h3>
-                <p>400+ opportunities</p>
+
+            <!-- Internship Card 3 -->
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card__header">
+                    <div>
+                        <h3 class="card__title">Data Science Intern</h3>
+                        <p class="company__name">Analytics Pro</p>
+                    </div>
+                    <img src="/api/placeholder/48/48" alt="Company Logo" class="company__logo">
+                </div>
+                <div class="card__meta">
+                    <div class="meta__item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Bangalore</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-time-line"></i>
+                        <span>6 months</span>
+                    </div>
+                    <div class="meta__item">
+                        <i class="ri-money-dollar-circle-line"></i>
+                        <span>₹20,000/month</span>
+                    </div>
+                </div>
+                <div class="skill__tags">
+                    <span class="skill__tag">Python</span>
+                    <span class="skill__tag">ML</span>
+                    <span class="skill__tag">SQL</span>
+                </div>
+                <button class="apply__btn">Apply Now</button>
             </div>
         </div>
     </section>
 
-    <!-- Featured Companies -->
-    <section class="companies">
-        <h2>Top Companies Hiring</h2>
-        <div class="company__grid">
-            <div class="company__card">
-                <img src="assets/img/company1.png" alt="Company 1">
-                <h3>Tech Solutions</h3>
-                <p>15 active internships</p>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats__grid">
+            <div class="stat__card" data-aos="fade-up">
+                <div class="stat__number" id="companies">500+</div>
+                <div class="stat__label">Partner Companies</div>
             </div>
-            <div class="company__card">
-                <img src="assets/img/company2.png" alt="Company 2">
-                <h3>Digital Minds</h3>
-                <p>10 active internships</p>
+            <div class="stat__card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat__number" id="internships">1000+</div>
+                <div class="stat__label">Active Internships</div>
             </div>
-            <div class="company__card">
-                <img src="assets/img/company3.png" alt="Company 3">
-                <h3>Creative Hub</h3>
-                <p>8 active internships</p>
+            <div class="stat__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat__number" id="students">50,000+</div>
+                <div class="stat__label">Registered Students</div>
+            </div>
+            <div class="stat__card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat__number" id="placements">80%</div>
+                <div class="stat__label">Placement Rate</div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="features">
-        <h2>Why Choose Apna Kaam?</h2>
-        <div class="features__grid">
-            <div class="feature__card">
-                <i class="ri-verified-badge-line"></i>
-                <h3>Verified Internships</h3>
-                <p>All internships are verified and from trusted companies</p>
+    <!-- Resources Section -->
+    <section class="resources">
+        <h2 class="section__title">Prepare for Success</h2>
+        <div class="resources__grid">
+            <div class="resource__card" data-aos="fade-up">
+                <i class="ri-file-list-3-line resource__icon"></i>
+                <h3 class="resource__title">Resume Builder</h3>
+                <p class="resource__description">Create an ATS-friendly resume with our professional templates</p>
             </div>
-            <div class="feature__card">
-                <i class="ri-money-dollar-circle-line"></i>
-                <h3>Paid Opportunities</h3>
-                <p>Find internships with attractive stipends</p>
+            <div class="resource__card" data-aos="fade-up" data-aos-delay="100">
+                <i class="ri-customer-service-2-line resource__icon"></i>
+                <h3 class="resource__title">Mock Interviews</h3>
+                <p class="resource__description">Practice with industry experts and get valuable feedback</p>
             </div>
-            <div class="feature__card">
-                <i class="ri-shield-star-line"></i>
-                <h3>Quality Learning</h3>
-                <p>Learn from industry experts and gain real experience</p>
+            <div class="resource__card" data-aos="fade-up" data-aos-delay="200">
+                <i class="ri-graduation-cap-line resource__icon"></i>
+                <h3 class="resource__title">Skill Courses</h3>
+                <p class="resource__description">Learn in-demand skills from industry professionals</p>
             </div>
         </div>
     </section>
@@ -116,21 +209,38 @@
             <div class="footer__section">
                 <h3>Apna Kaam</h3>
                 <p>Your gateway to meaningful internships and career opportunities.</p>
+                <div class="social__links">
+                    <a href="#" class="social__link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social__link"><i class="ri-twitter-fill"></i></a>
+                    <a href="#" class="social__link"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="social__link"><i class="ri-instagram-fill"></i></a>
+                </div>
             </div>
             <div class="footer__section">
                 <h3>Quick Links</h3>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Find Internships</a>
+                    <a href="#" class="footer__link">Companies</a>
+                    <a href="#" class="footer__link">Resources</a>
+                    <a href="#" class="footer__link">About Us</a>
+                </div>
             </div>
             <div class="footer__section">
-                <h3>Connect With Us</h3>
-                <div class="social__links">
-                    <a href="#"><i class="ri-facebook-fill"></i></a>
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-linkedin-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                <h3>For Students</h3>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Resume Builder</a>
+                    <a href="#" class="footer__link">Mock Interviews</a>
+                    <a href="#" class="footer__link">Skill Courses</a>
+                    <a href="#" class="footer__link">Career Blog</a>
+                </div>
+            </div>
+            <div class="footer__section">
+                <h3>For Companies</h3>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Post Internship</a>
+                    <a href="#" class="footer__link">Hire Interns</a>
+                    <a href="#" class="footer__link">Branding Solutions</a>
+                    <a href="#" class="footer__link">Success Stories</a>
                 </div>
             </div>
         </div>
@@ -138,6 +248,70 @@
             <p>&copy; 2024 Apna Kaam. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Filter buttons
+        const filterBtns = document.querySelectorAll('.filter__btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Simple animation for stats numbers
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value + (element.id === 'placements' ? '%' : '+');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger stats animation when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = {
+                        'companies': 500,
+                        'internships': 1000,
+                        'students': 50000,
+                        'placements': 80
+                    };
+                    Object.entries(stats).forEach(([id, value]) => {
+                        animateValue(document.getElementById(id), 0, value, 2000);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.stats'));
+    </script>
 </body>
 </html>
-

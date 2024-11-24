@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities - Apna Kaam</title>
+    
+    <!-- Remixicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Range Slider -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
+   
+    <link href="main2.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar (Same as main page) -->
+    <nav class="navbar">
+        <div class="nav__container">
+            <div class="nav__brand">Apna Kaam</div>
+            <div class="nav__links">
+                <a href="main.html" class="nav__link">Home</a>
+                <a href="internship.html" class="nav__link active">Internships</a>
+                <a href="#" class="nav__link">Companies</a>
+                <a href="#" class="nav__link">Resources</a>
+            </div>
+            <div class="nav__buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search__container">
+                <div class="search__box">
+                    <input type="text" class="search__input" placeholder="Search by skill, company, or role...">
+                    <input type="text" class="search__location" placeholder="Location">
+                    <button class="search__button">
+                        <i class="ri-search-line"></i> Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="filter__container">
+                <div class="filter__header">
+                    <h3>Filters</h3>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+                
+                <!-- Type Filters -->
+                <div class="filter__group">
+                    <h4>Type</h4>
+                    <div class="filter__options">
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="type" value="full-time">
+                            <span>Full Time</span>
+                        </label>
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="type" value="part-time">
+                            <span>Part Time</span>
+                        </label>
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="type" value="remote">
+                            <span>Remote</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Duration Filter -->
+                <div class="filter__group">
+                    <h4>Duration</h4>
+                    <div class="filter__options">
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="duration" value="0-3">
+                            <span>0-3 months</span>
+                        </label>
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="duration" value="3-6">
+                            <span>3-6 months</span>
+                        </label>
+                        <label class="filter__checkbox">
+                            <input type="checkbox" name="duration" value="6+">
+                            <span>6+ months</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Stipend Range -->
+                <div class="filter__group">
+                    <h4>Stipend Range (₹)</h4>
+                    <div id="stipend-range"></div>
+                    <div class="range-values">
+                        <span id="stipend-min">₹0</span>
+                        <span id="stipend-max">₹50,000+</span>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="filter__group">
+                    <h4>Skills</h4>
+                    <div class="skills-input">
+                        <input type="text" placeholder="Add skills..." id="skill-input">
+                        <div class="selected-skills"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results__container">
+                <div class="results__header">
+                    <div class="results__count">
+                        <h2>Found <span id="internship-count">245</span> Internships</h2>
+                    </div>
+                    <div class="results__sort">
+                        <select class="sort-select">
+                            <option value="latest">Latest First</option>
+                            <option value="stipend-high">Highest Stipend</option>
+                            <option value="stipend-low">Lowest Stipend</option>
+                            <option value="duration-short">Shortest Duration</option>
+                            <option value="duration-long">Longest Duration</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Internship Cards Grid -->
+                <div class="cards__grid">
+                    <!-- Internship Card Template (Repeated) -->
+                    <div class="card" data-aos="fade-up">
+                        <div class="card__header">
+                            <div>
+                                <h3 class="card__title">Frontend Developer Intern</h3>
+                                <p class="company__name">TechCorp Solutions</p>
+                            </div>
+                            <img src="/api/placeholder/48/48" alt="Company Logo" class="company__logo">
+                        </div>
+                        <div class="card__meta">
+                            <div class="meta__item">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Remote</span>
+                            </div>
+                            <div class="meta__item">
+                                <i class="ri-time-line"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="meta__item">
+                                <i class="ri-money-dollar-circle-line"></i>
+                                <span>₹15,000/month</span>
+                            </div>
+                        </div>
+                        <div class="skill__tags">
+                            <span class="skill__tag">React</span>
+                            <span class="skill__tag">JavaScript</span>
+                            <span class="skill__tag">CSS</span>
+                        </div>
+                        <button class="apply__btn">Apply Now</button>
+                    </div>
+
+                    <!-- More internship cards here (8-10 cards) -->
+                    
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <div class="page-numbers">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn">12</button>
+                    </div>
+                    <button class="page-btn next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as main page) -->
+    <footer class="footer">
+        <!-- Footer content same as main page -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Range Slider
+        const stipendRange = document.getElementById('stipend-range');
+        if (stipendRange) {
+            noUiSlider.create(stipendRange, {
+                start: [5000, 40000],
+                connect: true,
+                range: {
+                    'min': 0,
+                    'max': 50000
+                },
+                format: {
+                    to: value => Math.round(value),
+                    from: value => Math.round(value)
+                }
+            });
+
+            // Update range values
+            const stipendMin = document.getElementById('stipend-min');
+            const stipendMax = document.getElementById('stipend-max');
+            
+            stipendRange.noUiSlider.on('update', (values, handle) => {
+                const value = values[handle];
+                if (handle === 0) {
+                    stipendMin.textContent = `₹${value}`;
+                } else {
+                    stipendMax.textContent = value >= 50000 ? '₹50,000+' : `₹${value}`;
+                }
+            });
+        }
+
+        // Skills Input Handler
+        const skillInput = document.getElementById('skill-input');
+        const selectedSkills = document.querySelector('.selected-skills');
+        
+        if (skillInput) {
+            skillInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && skillInput.value.trim()) {
+                    const skill = document.createElement('span');
+                    skill.className = 'skill__tag';
+                    skill.innerHTML = `
+                        ${skillInput.value}
+                        <i class="ri-close-line" onclick="this.parentElement.remove()"></i>
+                    `;
+                    selectedSkills.appendChild(skill);
+                    skillInput.value = '';
+                }
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
