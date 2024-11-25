@@ -103,7 +103,15 @@ body {
     justify-content: center;
     text-align: center;
     padding: 6rem 2rem;
-    background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: 
+        linear-gradient(
+            rgba(10, 10, 10, 0.8), 
+            rgba(10, 10, 10, 0.9)
+        ),
+        url('../images/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero__content {
