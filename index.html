@@ -7,7 +7,7 @@
 </head>
 <body>
 <!-- Add navigation bar -->
-<nav>
+<nav aria-label="Main Navigation">
   <div class="nav-left">
     <img src="2.jpg" alt="Company Logo" class="logo">
   </div>
@@ -19,32 +19,32 @@
   </div>
 </nav>
 <!-- partial:index.partial.html -->
-<section>
+<section aria-labelledby="login-heading">
   <div class="form-box">
     <div class="form-value">
       <form action="">
-        <h2>Login</h2>
+        <h2 id="login-heading">Login</h2>
         <div class="inputbox">
           <ion-icon name="mail-outline"></ion-icon>
-          <input type="email" required>
+          <input type="email" required aria-required="true">
           <label for="">Email</label>
         </div>
         <div class="inputbox">
           <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" required>
+          <input type="password" required aria-required="true">
           <label for="">Password</label>
         </div>
         <div class="forget">
           <label>
-            <input type="checkbox"> Remember me
+            <input type="checkbox" aria-label="Remember me"> Remember me
           </label>
           <label>
             <a href="#">Forgot password?</a>
           </label>
         </div>
-        <button>Log in</button>
+        <button type="submit">Log in</button>
         <div class="register">
-          <p>Don't have a account ? <a href="register.html">Register</a></p>
+          <p>Don't have an account? <a href="register.html">Register</a></p>
         </div>
       </form>
     </div>
