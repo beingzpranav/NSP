@@ -1,68 +1,57 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="styles.css">
-
-      <title>Login form - Bedimcode</title>
-   </head>
-   <body>
-      <!-- Added Navigation Bar -->
-      <nav class="navbar">
-         <div class="nav__container">
-            <div class="nav__brand">Apna Kaam</div>
-            <div class="nav__links">
-               <a href="main.html" class="nav__link">Home</a>
-               <a href="internship.html" class="nav__link">Internships</a>
-               <a href="#" class="nav__link">Companies</a>
-               <a href="#" class="nav__link">Resources</a>
-            </div>
-            <div class="nav__buttons">
-               <a href="index.html" class="btn btn-outline">Login</a>
-               <a href="register.html" class="btn btn-primary">Sign Up</a>
-            </div>
-         </div>
-      </nav>
-
-      <div class="login">
-         <img src="assets/img/login-bg.png" alt="image" class="login__bg">
-
-         <form action="" class="login__form">
-            <h1 class="login__title">Login</h1>
-
-            <div class="login__inputs">
-               <div class="login__box">
-                  <input type="email" placeholder="Email ID" required class="login__input">
-                  <i class="ri-mail-fill"></i>
-               </div>
-
-               <div class="login__box">
-                  <input type="password" placeholder="Password" required class="login__input">
-                  <i class="ri-lock-2-fill"></i>
-               </div>
-            </div>
-
-            <div class="login__check">
-               <div class="login__check-box">
-                  <input type="checkbox" class="login__check-input" id="user-check">
-                  <label for="user-check" class="login__check-label">Remember me</label>
-               </div>
-
-               <a href="#" class="login__forgot">Forgot Password?</a>
-            </div>
-
-            <button type="submit" class="login__button" onclick="window.location.href='main.html'">Login</button>
-
-            <div class="login__register">
-               Don't have an account? <a href="register.html">Register</a>
-            </div>
-         </form>
-      </div>
-   </body>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Glassmorphism Login form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- Add navigation bar -->
+<nav>
+  <div class="nav-left">
+    <img src="2.jpg" alt="Company Logo" class="logo">
+  </div>
+  <div class="nav-right">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Internship</a>
+    <a href="#" class="nav-link">Companies</a>
+    <a href="#" class="nav-link">Profile</a>
+  </div>
+</nav>
+<!-- partial:index.partial.html -->
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form action="">
+        <h2>Login</h2>
+        <div class="inputbox">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" required>
+          <label for="">Email</label>
+        </div>
+        <div class="inputbox">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" required>
+          <label for="">Password</label>
+        </div>
+        <div class="forget">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+          <label>
+            <a href="#">Forgot password?</a>
+          </label>
+        </div>
+        <button>Log in</button>
+        <div class="register">
+          <p>Don't have a account ? <a href="register.html">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- partial -->
+  <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+</body>
 </html>
