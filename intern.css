@@ -46,7 +46,7 @@ body {
 .nav__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +106,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 8rem 2rem;
+    padding: 8rem 1rem;
 }
 
 .hero::before {
@@ -211,7 +211,7 @@ body {
 .internships {
     max-width: 1200px;
     margin: 4rem auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .section__header {
@@ -401,7 +401,7 @@ body {
 .footer__content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
@@ -476,6 +476,10 @@ body {
     .footer__content {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 /* Animations */
@@ -501,9 +505,9 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 2rem;
